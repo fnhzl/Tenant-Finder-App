@@ -12,6 +12,8 @@ class SignUpPage extends StatefulWidget {
 
 class _SignUpPageState extends State<SignUpPage> {
   TextEditingController _passwordTextController = TextEditingController();
+  TextEditingController _confirmpasswordTextController =
+      TextEditingController();
   TextEditingController _emailTextController = TextEditingController();
   TextEditingController _fullnameTextController = TextEditingController();
   TextEditingController _phonenumTextController = TextEditingController();
@@ -60,6 +62,11 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       reusableTextField("Password", Icons.lock_outline, true,
                           _passwordTextController),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      reusableTextField("Confirm Password", Icons.lock_outline,
+                          true, _confirmpasswordTextController),
                       SizedBox(
                         height: 20,
                       ),
